@@ -217,8 +217,12 @@
   .topbar-social a:hover{background:var(--gold-500);color:var(--teal-900)}
 
   .site-header{
-    position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);
+  }
+  .site-header::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(10px);
   }
   .site-header .container{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
   .brand{display:flex;align-items:center;gap:12px;min-width:0}
